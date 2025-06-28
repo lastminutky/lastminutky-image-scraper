@@ -1,0 +1,8 @@
+{
+  "name": "lastminutky-image-scraper",
+  "version": "0.1",
+  "buildTag": "latest",
+  "env": {},
+  "main": "main.js",
+  "types": "generic"
+}
