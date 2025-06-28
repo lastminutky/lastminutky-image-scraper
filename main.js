@@ -3,7 +3,7 @@ const Apify = require('apify');
 Apify.main(async () => {
     const input = await Apify.getInput();
     const hotelName = input.hotelName;
-    const searchUrl = \`https://www.lastminutky.sk/vyhladavanie-zajazdov/1/?q=\${encodeURIComponent(hotelName)}\`;
+const searchUrl = `https://www.lastminutky.sk/vyhladavanie-zajazdov/1/?q=${encodeURIComponent(hotelName)}`;
 
     const requestQueue = await Apify.openRequestQueue();
     await requestQueue.addRequest({ url: searchUrl, userData: { type: 'search' } });
