@@ -16,7 +16,7 @@ const searchUrl = `https://www.lastminutky.sk/vyhladavanie-zajazdov/1/?q=${encod
             if (request.userData.type === 'search') {
                 const hotelLink = $('a.card-title').attr('href');
                 if (hotelLink) {
-                    const fullUrl = \`https://www.lastminutky.sk\${hotelLink}\`;
+                    const fullUrl = `https://www.lastminutky.sk${hotelLink}`;
                     await requestQueue.addRequest({ url: fullUrl, userData: { type: 'detail' } });
                 }
             } else if (request.userData.type === 'detail') {
